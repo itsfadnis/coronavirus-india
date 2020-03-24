@@ -34,6 +34,12 @@ yarn global add coronavirus-india
 coronavirus-india
 ```
 
+or (without global installation):
+
+```sh
+npx coronavirus-india
+```
+
 ## Author
 
 👤 **Nikhil Fadnis <nik.fadnis@gmail.com>**
