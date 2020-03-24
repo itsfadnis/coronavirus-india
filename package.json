@@ -1,0 +1,32 @@
+{
+  "name": "coronavirus-india",
+  "description": "Track official coronavirus numbers for India from the command line, published by the Ministry of Health & Family Welfare",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsfadnis/coronavirus-india.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itsfadnis/coronavirus-india/issues"
+  },
+  "homepage": "https://github.com/itsfadnis/coronavirus-india#readme",
+  "version": "1.0.0",
+  "bin": "./index.js",
+  "author": "Nikhil Fadnis <nik.fadnis@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "cheerio": "^1.0.0-rc.3",
+    "cli-table3": "^0.5.1",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "standard": "^14.3.3"
+  },
+  "scripts": {
+    "test": "standard",
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=10.x"
+  }
+}
