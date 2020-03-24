@@ -10,7 +10,7 @@
   </a>
 </p>
 
-> Track official coronavirus numbers for India from the command line, published by the Ministry of Health & Family Welfare
+> Track official coronavirus numbers for India from the command line, published by the [Ministry of Health & Family Welfare](https://www.mohfw.gov.in)
 
 ### 🏠 [Homepage](https://github.com/itsfadnis/coronavirus-india#readme)
 
