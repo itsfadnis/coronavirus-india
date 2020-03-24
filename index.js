@@ -48,7 +48,7 @@ const Table = require('cli-table3');
     head: [
       'Rank',
       'Name of State / UT',
-      'Confirmed  Cases',
+      'Confirmed Cases',
       'Recovered',
       'Deaths'
     ],
@@ -87,4 +87,12 @@ const Table = require('cli-table3');
   )
 
   console.log(table.toString())
+  console.log('Stay home. Stay safe.')
+
+  const printResource = (name, link) => {
+    console.log(`${chalk.cyan(name)}: ${chalk.blueBright.underline(link)}`)
+  }
+
+  printResource('Code', 'https://github.com/itsfadnis/coronavirus-india')
+  printResource('Ministry of health & family welfare', 'https://www.mohfw.gov.in')
 })()
