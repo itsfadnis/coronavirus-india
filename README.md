@@ -22,22 +22,19 @@
 
 - node >=10.x
 
-## Install
-
-```sh
-yarn global add coronavirus-india
-```
-
 ## 🚀 Usage
 
+- With npx:
+
 ```sh
-coronavirus-india
+$ npx coronavirus-india
 ```
 
-or (without global installation):
+- With global installation:
 
 ```sh
-npx coronavirus-india
+$ npm i -g coronavirus-india
+$ coronavirus-india
 ```
 
 ## Author
