@@ -14,6 +14,9 @@
 
 ### 🏠 [Homepage](https://github.com/itsfadnis/coronavirus-india#readme)
 
+## 📸 Screenshot
+![Preview](./screenshot.png)
+
 ## Prerequisites
 
 - node >=10.x
