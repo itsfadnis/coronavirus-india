@@ -3,7 +3,7 @@
   <a href='https://semaphoreci.com/itsfadnis/coronavirus-india'>
     <img src='https://semaphoreci.com/api/v1/itsfadnis/coronavirus-india/branches/master/badge.svg' alt='Build Status' />
   </a>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.1.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.1.1-blue.svg?cacheSeconds=2592000" />
   <img src="https://img.shields.io/badge/node-%3E%3D10.x-blue.svg" />
   <a href="https://github.com/itsfadnis/coronavirus-india/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
