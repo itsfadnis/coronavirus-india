@@ -16,9 +16,12 @@ const Table = require('cli-table3');
 
   const tRows = $('#cases tbody tr')
   tRows.each((index, tr) => {
-    // Do not process last row (It is a summary we don't need)
-    if (index === tRows.length - 1) {
+    if (index === tRows.length - 2) {
       rows.push(['Total', totalCases, totalRecoveries, totalDeaths])
+      return
+    }
+
+    if (index === tRows.length - 1) {
       return
     }
 
