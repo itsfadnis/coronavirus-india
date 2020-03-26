@@ -9,7 +9,7 @@
     "url": "https://github.com/itsfadnis/coronavirus-india/issues"
   },
   "homepage": "https://github.com/itsfadnis/coronavirus-india#readme",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "bin": "./index.js",
   "author": "Nikhil Fadnis <nik.fadnis@gmail.com>",
   "license": "MIT",
