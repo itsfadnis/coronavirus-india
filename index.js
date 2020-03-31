@@ -31,17 +31,15 @@ const Table = require('cli-table3');
     const state = $(children.get(1)).text()
 
     // Cases
-    const indian = parseInt($(children.get(2)).text(), 10)
-    const foreign = parseInt($(children.get(3)).text(), 10)
-    const cases = indian + foreign
+    const cases = parseInt($(children.get(2)).text(), 10)
     totalCases += cases
 
     // Recovered
-    const recovered = parseInt($(children.get(4)).text(), 10)
+    const recovered = parseInt($(children.get(3)).text(), 10)
     totalRecoveries += recovered
 
     // Deaths
-    const deaths = parseInt($(children.get(5)).text(), 10)
+    const deaths = parseInt($(children.get(4)).text(), 10)
     totalDeaths += deaths
 
     rows.push([state, cases, recovered, deaths])
