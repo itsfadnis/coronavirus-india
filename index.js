@@ -1,49 +1,32 @@
 #!/usr/bin/env node
 
-const cheerio = require('cheerio')
 const fetch = require('node-fetch')
 const chalk = require('chalk')
 const Table = require('cli-table3');
 
 (async function () {
-  const response = await fetch('https://www.mohfw.gov.in')
-  const $ = cheerio.load(await response.text())
+  const response = await fetch('https://api.rootnet.in/covid19-in/stats/latest')
+  const json = await response.json()
 
-  let totalCases = 0
-  let totalRecoveries = 0
-  let totalDeaths = 0
+  const { regional, summary } = json.data
+
+  const mapRegionToRow = region => [
+    region.loc,
+    region.confirmedCasesIndian + region.confirmedCasesForeign,
+    region.discharged,
+    region.deaths
+  ]
+
+  const mapSummaryToRow = summary => [
+    'Total',
+    summary.total,
+    summary.discharged,
+    summary.deaths
+  ]
+
   const rows = []
-
-  const tRows = $('#cases tbody tr')
-  tRows.each((index, tr) => {
-    if (index === tRows.length - 2) {
-      rows.push(['Total', totalCases, totalRecoveries, totalDeaths])
-      return
-    }
-
-    if (index === tRows.length - 1) {
-      return
-    }
-
-    const children = $(tr).children()
-
-    // Name of state
-    const state = $(children.get(1)).text()
-
-    // Cases
-    const cases = parseInt($(children.get(2)).text(), 10)
-    totalCases += cases
-
-    // Recovered
-    const recovered = parseInt($(children.get(3)).text(), 10)
-    totalRecoveries += recovered
-
-    // Deaths
-    const deaths = parseInt($(children.get(4)).text(), 10)
-    totalDeaths += deaths
-
-    rows.push([state, cases, recovered, deaths])
-  })
+  rows.push(...regional.map(mapRegionToRow))
+  rows.push(mapSummaryToRow(summary))
 
   const table = new Table({
     head: [
